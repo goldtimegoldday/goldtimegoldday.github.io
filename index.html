@@ -59,11 +59,17 @@
       .logo {
         width: 34px; height: 34px;
         border-radius: 10px;
-        background: linear-gradient(135deg, rgba(245,197,66,0.95), rgba(106,166,255,0.85));
-        display: grid; place-items: center;
-        color: rgba(0,0,0,0.72);
-        font-weight: 800;
-        letter-spacing: 0.5px;
+        background: transparent;
+        display: grid;
+        place-items: center;
+      }
+      .logo img {
+        width: 34px;
+        height: 34px;
+        border-radius: 10px;
+        display: block;
+        object-fit: cover;
+        border: 1px solid var(--line);
       }
       .brand { font-weight: 800; }
       .nav-links { display: flex; gap: 14px; flex-wrap: wrap; justify-content: flex-end; }
@@ -125,10 +131,11 @@
     <div class="wrap">
       <div class="nav">
         <div class="nav-left">
-          <div class="logo" aria-hidden="true">金</div>
+          <div class="logo">
+            <img src="./assets/logo.png" alt="金時金日 Logo" />
+          </div>
           <div>
             <div class="brand">金時金日</div>
-            <div class="small">開發者網站</div>
           </div>
         </div>
         <div class="nav-links">
