@@ -35,8 +35,10 @@
         background: radial-gradient(1200px 800px at 20% -10%, rgba(245,197,66,0.25), transparent 60%),
                     radial-gradient(1200px 800px at 100% 10%, rgba(106,166,255,0.20), transparent 55%),
                     var(--bg);
+        background-repeat: no-repeat;
         color: var(--text);
         line-height: 1.6;
+        min-height: 100vh;
       }
       a { color: var(--accent); text-decoration: none; }
       a:hover { text-decoration: underline; }
@@ -60,10 +62,22 @@
         width: 34px; height: 34px;
         border-radius: 10px;
         background: linear-gradient(135deg, rgba(245,197,66,0.95), rgba(106,166,255,0.85));
-        display: grid; place-items: center;
+        display: grid;
+        place-items: center;
+        position: relative;
+        overflow: hidden;
+        border: 1px solid var(--line);
         color: rgba(0,0,0,0.72);
         font-weight: 800;
         letter-spacing: 0.5px;
+      }
+      .logo img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
       }
       .brand { font-weight: 800; }
       .nav-links { display: flex; gap: 14px; flex-wrap: wrap; justify-content: flex-end; }
@@ -125,10 +139,12 @@
     <div class="wrap">
       <div class="nav">
         <div class="nav-left">
-          <div class="logo" aria-hidden="true">金</div>
+          <div class="logo" aria-label="金時金日">
+            <span aria-hidden="true">金</span>
+            <img src="./assets/logo.png" alt="金時金日 Logo" onerror="this.remove();" />
+          </div>
           <div>
             <div class="brand">金時金日</div>
-            <div class="small">開發者網站</div>
           </div>
         </div>
         <div class="nav-links">
