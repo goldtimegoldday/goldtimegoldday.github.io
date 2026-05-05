@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>金時金日｜開發者網站</title>
+    <title>金時金日</title>
     <meta name="description" content="金時金日：以八字角度管理財運節奏的月曆與時辰分析工具。提供人物檔案、財日月曆、時辰分析、提醒與記錄。" />
     <style>
       :root {
@@ -35,10 +35,8 @@
         background: radial-gradient(1200px 800px at 20% -10%, rgba(245,197,66,0.25), transparent 60%),
                     radial-gradient(1200px 800px at 100% 10%, rgba(106,166,255,0.20), transparent 55%),
                     var(--bg);
-        background-repeat: no-repeat;
         color: var(--text);
         line-height: 1.6;
-        min-height: 100vh;
       }
       a { color: var(--accent); text-decoration: none; }
       a:hover { text-decoration: underline; }
@@ -61,17 +59,11 @@
       .logo {
         width: 34px; height: 34px;
         border-radius: 10px;
-        background: transparent;
-        display: grid;
-        place-items: center;
-      }
-      .logo img {
-        width: 34px;
-        height: 34px;
-        border-radius: 10px;
-        display: block;
-        object-fit: cover;
-        border: 1px solid var(--line);
+        background: linear-gradient(135deg, rgba(245,197,66,0.95), rgba(106,166,255,0.85));
+        display: grid; place-items: center;
+        color: rgba(0,0,0,0.72);
+        font-weight: 800;
+        letter-spacing: 0.5px;
       }
       .brand { font-weight: 800; }
       .nav-links { display: flex; gap: 14px; flex-wrap: wrap; justify-content: flex-end; }
@@ -133,11 +125,10 @@
     <div class="wrap">
       <div class="nav">
         <div class="nav-left">
-          <div class="logo">
-            <img src="./assets/logo.png" alt="金時金日 Logo" />
-          </div>
+          <div class="logo" aria-hidden="true">金</div>
           <div>
             <div class="brand">金時金日</div>
+            <div class="small">開發者網站</div>
           </div>
         </div>
         <div class="nav-links">
